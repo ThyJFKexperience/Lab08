@@ -11,4 +11,29 @@ public class CustomListTest {
 
         assertTrue(list.hasCity(calgary));
     }
+
+    @Test
+    public void testDeleteCity() {
+        CustomList list = new CustomList();
+        City edmonton = new City("Edmonton", "AB");
+        list.addCity(edmonton);
+
+        list.deleteCity(edmonton);
+
+        assertFalse(list.hasCity(edmonton));
+    }
+
+    @Test
+    public void testCountCity() {
+        CustomList list = new CustomList();
+        City edmonton = new City("Edmonton", "AB");
+        list.addCity(edmonton);
+
+        assertEquals(1, list.countCities());
+
+        City calgary = new City("Calgary", "AB");
+        list.addCity(calgary);
+
+        assertEquals(2, list.countCities());
+    }
 }
