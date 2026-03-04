@@ -22,10 +22,8 @@ public class CustomList {
         if (!cities.contains(city)) {return;}
         cities.remove(city);
     }
-
-    /*
+    
     public int countCities() {
         return cities.size();
     }
-     */
 }
